@@ -18,3 +18,12 @@ mysql:
         MYSQL_DATABASE: db
         MYSQL_USER: user
         MYSQL_PASSWORD: password
+
+phpmyadmin:
+    image: phpmyadmin/phpmyadmin
+    ports:
+        - 8080:80
+    links:
+        - mysql
+    environment:
+        PMA_HOST: mysql
