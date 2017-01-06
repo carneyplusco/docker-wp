@@ -5,7 +5,7 @@ nginx:
     links:
         - mysql
     volumes:
-        - ./app:/var/www/html
+        - ../app:/var/www/html
 
 mysql:
     image: mysql:latest
